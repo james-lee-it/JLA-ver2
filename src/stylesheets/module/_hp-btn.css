@@ -1,0 +1,51 @@
+.hp-btn {
+  margin-top: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 5rem;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  color:white;
+  line-height: 5rem;
+  font-size: 2.3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  @media (min-width: $screen-sm-min) {
+    width: 30%;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 170px; /* To center text vertically, have line-height = height */
+    width: 170px;
+    height: 170px;
+    border-radius: 170px;
+    border-style: solid;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 250px; /* To center text vertically, have line-height = height */
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+  }
+
+  &--healthcare {
+    background: #d9534f;
+    background-image: linear-gradient(to bottom, #d9534f, #ffd4d3);
+  }
+
+  &--webDev {
+    background: #f0ad4e;
+    background-image: linear-gradient(to bottom, #f0ad4e, #f9e3c2);
+  }
+
+  &--blog {
+    background: #337ab7;
+    background-image: linear-gradient(to bottom, #337ab7, #a4cff4);
+  }
+}

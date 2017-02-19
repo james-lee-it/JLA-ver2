@@ -1,0 +1,36 @@
+.hp-profile {
+  text-align: center;
+
+  &__pic {
+    max-width: 130px;
+    border-radius: 10%;
+    margin: 1.2rem 0rem 0rem 0rem;
+
+    @media(min-width: $screen-sm-min) {
+      max-width: 150px;
+      padding-top: 25px;
+    }
+    @media(min-width: $screen-md-min) {
+      max-width: 150px;
+      padding-top: 25px;
+    }
+  }
+
+  &__slogan {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4rem;
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    margin-bottom: 1rem;
+
+    @media(min-width: $screen-sm-min) {
+      font-size: 5.5rem;
+      line-height: 25rem;
+    }
+
+    @media(min-width: $screen-md-min) {
+      font-size: 7.5rem;
+    }
+  }
+}

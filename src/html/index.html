@@ -1,11 +1,63 @@
-{#
-  Nunjucks Templating!
-  Homepage: https://mozilla.github.io/nunjucks/
-  Docs: https://mozilla.github.io/nunjucks/api.html
-#}
-
-{% extends 'layouts/application.html' %}
-
-{% block content %}
-  <h1 data-module="example">Hello World!</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="">
+    <meta name="author" content="James Lee">
+    <meta name="keywords" content="web design, web development, pharmacy, pharmacist, healthcare, youtube, management">
+    <meta name="description" content="James Lee, pharmacist, web developer, business management">
+    <!-- define source of font styles -->
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Merienda|Roboto' rel='stylesheet' type='text/css'>
+    <!--load CSS-->
+    <link rel="stylesheet" href="stylesheets/app.sass"/>
+    <!--load JS-->
+    <script src="dest/js/app.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <header>
+    </header>
+    <div class="hp-profile container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <img class="hp-profile__pic animated tada" src="./images/profilePic.png" alt="profilePic">
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="hp-profile__slogan animated bounceInRight">inspired to innovate</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <a href="#"><div class="hp-btn hp-btn--healthcare hvr-grow animated rotateIn infinite-delayed-loop">Healthcare</div></a>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <a href="#"><div class="hp-btn hp-btn--webDev hvr-grow animated rotateIn infinite-delayed-loop">Web Development</div></a>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <a href="#"><div class="hp-btn hp-btn--blog hvr-grow animated rotateIn infinite-delayed-loop">Blog</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row social-icon">
+          <a href="http://www.twitter.com/jamesleeand" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="dest/img/icon/twitter.png" alt="twitter"></a>
+          <a href="https://www.youtube.com/channel/UCYVNO1Lp8SiJMTiRCW2BZRg" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="dest/img/icon/youtube.png" alt="youtube"></a>
+          <a href="http://facebook.com/jamesleeand" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="dest/img/icon/facebook.png" alt="facebook"></a>
+          <a href="https://github.com/james-lee-it" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="dest/img/icon/github.png" alt="github"></a>
+          <a href="https://www.linkedin.com/in/jamesleeconnect" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="dest/img/icon/linkedin.png" alt="linkedin"></a>
+        </div>
+      </div>
+      <div class="row footer__copyright">
+        &#169; 2017 JamesLeeAnd.com
+      </div>
+    </footer>
+  </body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help

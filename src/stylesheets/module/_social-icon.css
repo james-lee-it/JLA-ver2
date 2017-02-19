@@ -1,0 +1,14 @@
+.social-icon {
+  display: block;
+  margin: 1.2em 0px 0px 0px;
+  float:none;
+  text-align: center;
+
+  &--padding {
+    padding: 0 0.4em;
+  }
+  &:hover {
+
+  }
+
+}
