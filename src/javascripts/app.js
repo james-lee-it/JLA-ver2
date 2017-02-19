@@ -3,7 +3,7 @@
 import './lib/angular'
 import './lib/angular-route'
 import './lib/angular-animate'
-import './controllers'
+import './js/controllers'
 
 /*
 var myApp = angular.module('myApp',[
