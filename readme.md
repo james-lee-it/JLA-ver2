@@ -1,6 +1,6 @@
 #Introduction
-This is the workflow/raw files of jamesleeand.com.
-In this project, I use AngularJS for data-binding and routing.
+This is the workflow and raw files of jamesleeand.com.
+In this project, I am incorporating AngularJS for data-binding and routing.
 
 ######Declaration:
 I use Gulp-Starter for my building environment. Files are modified based on my project needs.
