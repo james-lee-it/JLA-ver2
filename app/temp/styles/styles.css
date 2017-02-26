@@ -10127,28 +10127,10 @@ button.close {
   animation-name: slideOutUp;
 }
 /* Base */
-.bgcolor__index {
-  background: -webkit-linear-gradient(top, black, Grey) no-repeat center fixed;
-  background: linear-gradient(to bottom, black, Grey) no-repeat center fixed;
-  background-size: cover;
-}
-.title {
-	text-align: center;
-	padding: 2rem;
-}
 header {
   color: white;
 }
 /* Module */
-.delayed {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.footer__copyright {
-  text-align: center;
-  color: white;
-  padding: 10px 0;
-}
 /* Credit: sourced from hover.css on GitHub*/
 /* Grow */
 .hvr-grow {
@@ -10240,7 +10222,21 @@ header {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+.delayed {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.footer__copyright {
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+}
+.footer__copyright--index {
+  color: white;
+}
 .hp-btn {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   margin-top: 0.8em;
   margin-left: auto;
   margin-right: auto;
@@ -10251,13 +10247,11 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  color:white;
+  color: white;
   line-height: 5rem;
   font-size: 2.3rem;
   border-radius: 50px;
-  text-decoration: none;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+
 }
 @media (min-width: 768px) {
   .hp-btn {
@@ -10358,8 +10352,62 @@ header {
   list-style-type: none;
   border-style: solid;
   border-radius: 20px 0 0 10px;
-  margin-left: none;
-  margin-right: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 10px;
   background-color: #fff4c1;
+}
+@media (min-width: 768px) {
+  .list__webdev {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+.list__blog {
+  list-style-type: none;
+  padding: 1rem;
+  background: lightblue;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-image: -webkit-linear-gradient(45deg, white,lightblue);
+  background-image: linear-gradient(45deg, white,lightblue);
+}
+@media (min-width: 768px) {
+  .list__blog {
+    margin-left: none;
+    margin-right: none;
+  }
+}
+@media (min-width: 992px) {}
+.bgcolor__index {
+  background: -webkit-linear-gradient(top, black, Grey) no-repeat center fixed;
+  background: linear-gradient(to bottom, black, Grey) no-repeat center fixed;
+  background-size: cover;
+}
+.title {
+	text-align: center;
+	padding-top: 2rem;
+
+}
+.title--subtitle {
+  padding: 1rem;
+  font-size: 2rem;
+  font-style: italic;
+}
+.paragraph {
+		text-align: left;
+		font-size: 1.6rem;
+		max-width: 90%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+@media(min-width: 768px) {
+  .paragraph {
+    max-width: 500px;
+  }
+}
+@media(min-width: 992px) {
+  .paragraph {
+    max-width: 800px;
+  }
 }

@@ -1,0 +1,11 @@
+.title {
+	text-align: center;
+	padding-top: 2rem;
+
+	&--subtitle {
+		padding: 1rem;
+		font-size: 2rem;
+		font-style: italic;
+	}
+
+}

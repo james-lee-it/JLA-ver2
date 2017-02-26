@@ -1,0 +1,6 @@
+.bgcolor {
+	&__index {	
+	  background: linear-gradient(to bottom, black, Grey) no-repeat center fixed;
+	  background-size: cover;
+	}
+}

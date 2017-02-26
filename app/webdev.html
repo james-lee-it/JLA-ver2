@@ -33,13 +33,11 @@
   <body class="">
     <h1 class="title">Web Development Resources</h1>
     <div>
-      <ul>
-        <div class="list__webdev" ng-repeat="entry in webdev">
-          <h4>{{entry.title}}</h4>
-          <p>{{entry.snippet}}</p>
-          <a ng-href="{{entry.address}}">link</a>
-        </div>
-      </ul>
+      <div class="list__webdev" ng-repeat="entry in webdev">
+        <h4>{{entry.title}}</h4>
+        <p>{{entry.snippet}}</p>
+        <a ng-href="{{entry.address}}">link</a>
+      </div>
     </div>
 
 <!--footer-->

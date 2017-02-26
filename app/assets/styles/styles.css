@@ -8,11 +8,14 @@
 @import "base/_global";
 
 /* Module */
+@import "module/_hover";
 @import "module/_animation";
 @import "module/_footer";
-@import "module/_hover";
 @import "module/_hp-btn";
 @import "module/_hp-profile";
 @import "module/_social-icon";
 @import "module/_intro";
 @import "module/_list";
+@import "module/_bgcolor";
+@import "module/_title";
+@import "module/_paragraph";
