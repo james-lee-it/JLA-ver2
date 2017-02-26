@@ -1,0 +1,7 @@
+body {
+  background: linear-gradient(to bottom, black, Grey) no-repeat center fixed;
+  background-size: cover;
+}
+header {
+  color: white;
+}

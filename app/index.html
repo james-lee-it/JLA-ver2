@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myController">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="">
+    <meta name="author" content="James Lee">
+    <meta name="keywords" content="web design, web development, pharmacy, pharmacist, healthcare, youtube, management">
+    <meta name="description" content="James Lee, pharmacist, web developer, business management">
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- define source of font styles -->
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Merienda|Roboto' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <!-- build:css assets/styles/styles.css -->
+    <link rel="stylesheet" href="temp/styles/styles.css">
+    <!-- endbuild -->
+    <!-- Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-87271208-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- build:js assets/scripts/App.js -->
+    <script src="temp/scripts/App.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="hp-profile container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <img class="hp-profile__pic animated tada" src="./assets/images/profilePic.png" alt="profilePic">
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="hp-profile__slogan animated bounceInRight">inspired to innovate</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="healthcare.html"><div class="hp-btn hp-btn--healthcare hvr-grow animated rotateIn infinite-delayed-loop">Healthcare</div></a>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <a href="webdev.html"><div class="hp-btn hp-btn--webDev hvr-grow animated rotateIn infinite-delayed-loop">Web Development</div></a>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <a href="blog.html"><div class="hp-btn hp-btn--blog hvr-grow animated rotateIn infinite-delayed-loop">Blog</div></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="intro">
+            <h3>Hello! Welcome to my portfolio website.</h3>
+            <h4>I am a pharmacist and also a web developer.</h4>
+            <p>This personal branding website showcasts my experience, skills and capabilites. In this website, you can see my social media, espcially my YouTube Channel, on which I discuss about healthcare topics.</p>
+            <p>Feel free to get connected on LinkedIn, Twitter and GitHub!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul>
+        <li ng-repeat="blog in blogs">
+          {{blog.content}}
+        </li>
+      </ul>
+    </div>
+
+<!--footer-->
+    <footer>
+      <div class="container">
+        <div class="row social-icon">
+          <a href="http://www.twitter.com/jamesleeand" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/twitter.png" alt="twitter"></a>
+          <a href="https://www.youtube.com/channel/UCYVNO1Lp8SiJMTiRCW2BZRg" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/youtube.png" alt="youtube"></a>
+          <a href="http://facebook.com/jamesleeand" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/facebook.png" alt="facebook"></a>
+          <a href="https://github.com/james-lee-it" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/github.png" alt="github"></a>
+          <a href="https://www.linkedin.com/in/jamesleeconnect" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/linkedin.png" alt="linkedin"></a>
+        </div>
+      </div>
+      <div class="row footer__copyright">
+        &#169; 2017 JamesLeeAnd.com
+      </div>
+    </footer>
+<!--footer end-->
+  </body>
+</html>
