@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="webdevController">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="">
+    <meta name="author" content="James Lee">
+    <meta name="keywords" content="web design, web development, pharmacy, pharmacist, healthcare, youtube, management">
+    <meta name="description" content="James Lee, pharmacist, web developer, business management">
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- define source of font styles -->
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Merienda|Roboto' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <link rel="stylesheet" href="assets/styles/styles-78817b8240.css"/>
+    <!-- Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-87271208-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="assets/scripts/App-d69d88a691.js"></script>
+  </head>
+  <body class="">
+    <h1 class="title">Web Development Resources</h1>
+    <div>
+      <ul>
+        <div class="list__webdev" ng-repeat="entry in webdev">
+          <h4>{{entry.title}}</h4>
+          <p>{{entry.snippet}}</p>
+          <a ng-href="{{entry.address}}">link</a>
+        </div>
+      </ul>
+    </div>
+
+<!--footer-->
+    <footer>
+      <div class="container">
+        <div class="row social-icon">
+          <a href="http://www.twitter.com/jamesleeand" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/twitter.png" alt="twitter"></a>
+          <a href="https://www.youtube.com/channel/UCYVNO1Lp8SiJMTiRCW2BZRg" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/youtube.png" alt="youtube"></a>
+          <a href="http://facebook.com/jamesleeand" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/facebook.png" alt="facebook"></a>
+          <a href="https://github.com/james-lee-it" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/github.png" alt="github"></a>
+          <a href="https://www.linkedin.com/in/jamesleeconnect" class="social-icon--padding hvr-wobble-horizontal animated rotateIn"><img src="./assets/images/linkedin.png" alt="linkedin"></a>
+        </div>
+      </div>
+      <div class="row footer__copyright">
+        &#169; 2017 JamesLeeAnd.com
+      </div>
+    </footer>
+<!--footer end-->
+  </body>
+</html>

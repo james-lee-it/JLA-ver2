@@ -10127,10 +10127,14 @@ button.close {
   animation-name: slideOutUp;
 }
 /* Base */
-body {
+.bgcolor__index {
   background: -webkit-linear-gradient(top, black, Grey) no-repeat center fixed;
   background: linear-gradient(to bottom, black, Grey) no-repeat center fixed;
   background-size: cover;
+}
+.title {
+	text-align: center;
+	padding: 2rem;
 }
 header {
   color: white;
@@ -10348,4 +10352,14 @@ header {
 	padding-right: 5%;
 	color: white;
 
+}
+.list__webdev {
+  padding:1rem;
+  list-style-type: none;
+  border-style: solid;
+  border-radius: 20px 0 0 10px;
+  margin-left: none;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  background-color: #fff4c1;
 }

@@ -1,0 +1,12 @@
+.list {
+	&__webdev {
+		padding:1rem;
+		list-style-type: none;
+		border-style: solid;
+		border-radius: 20px 0 0 10px;
+		margin-left: none;
+		margin-right: 30px;
+		margin-bottom: 10px;
+		background-color: #fff4c1;
+	}
+}
