@@ -1,6 +1,5 @@
 /* Lib */
 @import "lib/_bootstrap";
-@import "lib/_animate";
 /* Base */
 @import "base/_var";
 @import "base/_global";
@@ -17,3 +16,4 @@
 @import "module/_bgcolor";
 @import "module/_title";
 @import "module/_paragraph";
+@import "module/_search";

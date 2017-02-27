@@ -2,6 +2,7 @@ header {
   color: white;
 }
 
-a:hover {
+a:hover,
+a:active {
 	text-decoration: none;
 }

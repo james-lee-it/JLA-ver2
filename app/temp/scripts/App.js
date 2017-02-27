@@ -66,6 +66,7 @@
 	app.controller('webdevController', ['$scope', '$http', function webdevController($scope, $http) {
 		$http.get('./../../webdev.json').then(function (res) {
 			$scope.webdev = res.data;
+			$scope.webdevResourceOrder = 'description';
 		});
 	}]);
 

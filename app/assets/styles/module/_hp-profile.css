@@ -5,6 +5,7 @@
     max-width: 130px;
     border-radius: 10%;
     margin: 1.2rem 0rem 0rem 0rem;
+    animation: tada 1s;
 
     @media(min-width: $screen-sm-min) {
       max-width: 150px;
@@ -23,6 +24,8 @@
     font-family: 'Kaushan Script', cursive;
     color: white;
     margin-bottom: 1rem;
+
+    animation: bounceInRight 1s;
 
     @media(min-width: $screen-sm-min) {
       font-size: 5.5rem;

@@ -1,27 +1,27 @@
 [
 	{
 		"title": "From Sass to PostCSS",
-		"snippet": "This is a blog in which the author discusses why he believed PostCSS is the way forward, compared to Sass.",
+		"description": "This is a blog in which the author discusses why he believed PostCSS is the way forward, compared to Sass.",
 		"address": "https://pawelgrzybek.com/from-sass-to-postcss/"
 	},
 	{
 		"title": "Listing globally installed NPM packages and version",
-		"snippet": "It shows how to find the globally installed NPM",
+		"description": "It shows how to find the globally installed NPM",
 		"address": "https://ponderingdeveloper.com/2013/09/03/listing-globally-installed-npm-packages-and-version/"
 	},
 	{
 		"title": "What is a Module?",
-		"snippet": "The module and module.exports",
+		"description": "The module and module.exports",
 		"address": "https://github.com/vigetlabs/gulp-starter/wiki/What-is-a-Module%3F"
 	},
 	{
 		"title": "Official AngularJS building environment",
-		"snippet": "The official AngularJS website recommends using Yarn, Java, and Grunt to build AngularJS app. However, I used Gulp, Webpack, and BrowserSync.",
+		"description": "The official AngularJS website recommends using Yarn, Java, and Grunt to build AngularJS app. However, I used Gulp, Webpack, and BrowserSync.",
 		"address": "https://docs.angularjs.org/misc/contribute"
 	},
 	{
 		"title": "ES6 Overview in 350 Bullet Points",
-		"snippet": "This website summaries the differences between ES5 & ES6 very well.",
+		"description": "This website summaries the differences between ES5 & ES6 very well.",
 		"address": "https://ponyfoo.com/articles/es6"
 	}	
 ]

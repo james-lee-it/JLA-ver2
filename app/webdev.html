@@ -14,6 +14,8 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Merienda|Roboto' rel='stylesheet' type='text/css'>
     <!-- AngularJS CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <!-- Angular route CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
     <!-- build:css assets/styles/styles.css -->
     <link rel="stylesheet" href="temp/styles/styles.css">
     <!-- endbuild -->
@@ -30,12 +32,38 @@
     <script src="temp/scripts/App.js"></script>
     <!-- endbuild -->
   </head>
-  <body class="">
+  <body>
     <h1 class="title">Web Development Resources</h1>
-    <div>
-      <div class="list__webdev" ng-repeat="entry in webdev">
+
+    <div class="row">
+      <div class="search">
+        <label>Search for resources:</label>
+        <input ng-model="query" placeholder="type here" autofocus>
+
+        <label>Sort By:
+          <select ng-model="webdevResourceOrder" >
+            <option value="title">title</option>
+            <option value="description">description</option>
+          </select>
+        </label>
+
+        <label>
+          <input type="radio" ng-model="direction" name="direction" checked>
+          ascend
+        </label>
+
+        <label>
+          <input type="radio" ng-model="direction" name="direction" value="reverse">
+          descend
+        </label>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="list__webdev" ng-repeat="entry in webdev | filter: query | orderBy: webdevResourceOrder:direction">
         <h4>{{entry.title}}</h4>
-        <p>{{entry.snippet}}</p>
+        <p>{{entry.description}}</p>
         <a ng-href="{{entry.address}}">link</a>
       </div>
     </div>
