@@ -1,5 +1,4 @@
 .hp-btn {
-  transition: all .2s ease-in-out;
   margin-top: 0.8em;
   margin-left: auto;
   margin-right: auto;
@@ -34,18 +33,36 @@
   }
 
   &--healthcare {
-    background: #d9534f;
     background-image: linear-gradient(to bottom, #d9534f, #ffd4d3);
+
+    animation: slideInLeft 0.5s;
+    
+    @media(min-width: $screen-sm-min) {
+      animation: rotateIn 0.5s;
+    }
+
   }
 
   &--webDev {
-    background: #f0ad4e;
     background-image: linear-gradient(to bottom, #f0ad4e, #f9e3c2);
+    
+    animation: slideInRight 0.5s;
+
+    @media(min-width: $screen-sm-min) {
+      animation: rotateIn 0.5s;
+    }
   }
 
   &--blog {
-    background: #337ab7;
     background-image: linear-gradient(to bottom, #337ab7, #a4cff4);
+
+    animation: slideInLeft 0.5s;
+    
+    @media(min-width: $screen-sm-min) {
+      animation: rotateIn 0.5s;
+    }
   }
 
 }
+
+

@@ -24,6 +24,8 @@
 		margin-left: 5%;
 		margin-right: 5%;
 	    background-image: linear-gradient(45deg, white,lightblue);
+	    border-radius: 30px 15px 80px 10px;
+	    white-space: pre-line;
 		
 		@media (min-width: $screen-sm-min) {
 			margin-left: none;

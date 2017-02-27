@@ -5,14 +5,12 @@
   backface-visibility: hidden;
   transition-duration: 0.3s;
   transition-property: transform;
-  text-decoration: none;
 }
 
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
   transform: scale(1.2);
-  text-decoration: none;
 }
 
 /* Wobble Horizontal */
