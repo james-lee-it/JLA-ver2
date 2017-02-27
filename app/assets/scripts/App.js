@@ -6,9 +6,40 @@
 //import './js/controllers'
 
 // define myApp
-var app = angular.module('myApp',[]);
 
-// controller for databinding of blog entries 
+import 'angular';
+import 'angular-ui-router';
+
+var app = angular.module('myApp',[
+	'ui.router'
+]);
+
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	$stateProvider
+		.state('webdev', {
+			url: '/webdev',
+			templateUrl: './../../webdev.html',
+			controller: 'webdevController'
+			})
+
+		.state('home', {
+			url: '/home',
+			templateUrl: './../../home.html'
+		})
+
+		.state('blog', {
+			url: '/blog',
+			templateUrl: './../../blog.html',
+			controller: 'blogController'
+		})
+		.state('healthcare', {
+			url: '/healthcare',
+			templateUrl: './../../healthcare.html'
+		});
+
+	$urlRouterProvider.otherwise('/home');
+}]);
+
 app.controller('blogController', ['$scope', '$http', function blogController($scope, $http) {
 	$http.get('./../../blogs.json').then(function(resp) {
 		$scope.blogs = resp.data;
