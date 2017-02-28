@@ -7,6 +7,7 @@ In this project, I use the following for background building environment:
 * `PostCSS` and the plugins - as the CSS preprocessor
 * `Webpack` for bundling JS files
 * `BrowserSync` as web server and 'gulp watch' changes to the codes
+* `Babel` to convert ES6 to ES5 for web browser compatibility
 
 ## JS Framework
 I use `AngularJS` (Angular 1) for my project.
@@ -20,3 +21,5 @@ You can find the #!/ segment in the URL.
 ## CSS
 I use `CSS animation` - keyframe, transform and transition.
 Part of the CSS are inspired from `animate.css` and `hover.css`.
+### Bootstrap
+I use `Bootstrap` for responsive web design.
