@@ -6691,6 +6691,8 @@ header {
 a:hover,
 a:active {
 	text-decoration: none;
+	-webkit-filter: grayscale(100%);
+	        filter: grayscale(100%);
 }
 /* Module */
 /* Credit: sourced from hover.css on GitHub*/

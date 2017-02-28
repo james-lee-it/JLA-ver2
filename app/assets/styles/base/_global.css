@@ -5,4 +5,5 @@ header {
 a:hover,
 a:active {
 	text-decoration: none;
+	filter: grayscale(100%);
 }
