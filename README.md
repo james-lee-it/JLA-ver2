@@ -20,3 +20,5 @@ You can find the #!/ segment in the URL.
 ## CSS
 I use `CSS animation` - keyframe, transform and transition.
 Part of the CSS are inspired from `animate.css` and `hover.css`.
+### Bootstrap
+I use `Bootstrap` for responsive web design.
