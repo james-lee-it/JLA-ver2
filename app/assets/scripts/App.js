@@ -1,19 +1,15 @@
-// import Angular, Angular-route and Angular-animate
-//import angular from './lib/angular.min'; put import angular from './lib/angular'?
-//import './lib/angular-route'
-
-// import controllers
-//import './js/controllers'
-
-// define myApp
-
+// import angular and angular-ui-router
 import 'angular';
 import 'angular-ui-router';
+import 'angular-backtop';
 
+// define app as angular's main module
 var app = angular.module('myApp',[
-	'ui.router'
+	'ui.router',
+	'angular.backtop'
 ]);
 
+// config routing
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('webdev', {
@@ -40,15 +36,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 	$urlRouterProvider.otherwise('/home');
 }]);
 
+
+// define controller
 app.controller('blogController', ['$scope', '$http', function blogController($scope, $http) {
 	$http.get('./../../blogs.json').then(function(resp) {
 		$scope.blogs = resp.data;
 	  });
 }]);
 
-app.controller('webdevController', ['$scope', '$http', function webdevController($scope, $http) {
+app.controller('webdevController', ['$scope', '$http', '$stateParams', function webdevController($scope, $http, $stateParams) {
 	$http.get('./../../webdev.json').then(function(res) {
 		$scope.webdev = res.data;
 		$scope.webdevResourceOrder = 'description';
+		$scope.whichItem = $stateParams.itemId;
 	  });
 }]);

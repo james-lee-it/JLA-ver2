@@ -50,17 +50,13 @@
 
 	__webpack_require__(3);
 
-	// import Angular, Angular-route and Angular-animate
-	//import angular from './lib/angular.min'; put import angular from './lib/angular'?
-	//import './lib/angular-route'
+	__webpack_require__(4);
 
-	// import controllers
-	//import './js/controllers'
+	// define app as angular's main module
+	var app = angular.module('myApp', ['ui.router', 'angular.backtop']);
 
-	// define myApp
-
-	var app = angular.module('myApp', ['ui.router']);
-
+	// config routing
+	// import angular and angular-ui-router
 	app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 		$stateProvider.state('webdev', {
 			url: '/webdev',
@@ -81,16 +77,18 @@
 		$urlRouterProvider.otherwise('/home');
 	}]);
 
+	// define controller
 	app.controller('blogController', ['$scope', '$http', function blogController($scope, $http) {
 		$http.get('./../../blogs.json').then(function (resp) {
 			$scope.blogs = resp.data;
 		});
 	}]);
 
-	app.controller('webdevController', ['$scope', '$http', function webdevController($scope, $http) {
+	app.controller('webdevController', ['$scope', '$http', '$stateParams', function webdevController($scope, $http, $stateParams) {
 		$http.get('./../../webdev.json').then(function (res) {
 			$scope.webdev = res.data;
 			$scope.webdevResourceOrder = 'description';
+			$scope.whichItem = $stateParams.itemId;
 		});
 	}]);
 
@@ -37930,6 +37928,90 @@
 	  .filter('isState', $IsStateFilter)
 	  .filter('includedByState', $IncludedByStateFilter);
 	})(window, window.angular);
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	var backtop = angular.module('angular.backtop', []);
+
+	backtop.directive('backTop', [function() {
+	  return {
+	    restrict: 'E',
+	    transclude: true,
+	    replace: true,
+	    template: '<div id="backtop" class="{{theme}}"><button>{{text}}</button></div>',
+	    scope: {
+	      text: "@buttonText",
+	      speed: "@scrollSpeed",
+	      theme: "@buttonTheme"
+	    },
+	    link: function(scope, element) {
+
+	      scope.text = scope.text || 'top';
+	      scope.speed = parseInt(scope.speed, 10) || 300;
+	      scope.theme = scope.theme || 'light';
+
+	      var self = this;
+
+	      scope.currentYPosition = function() {
+	        if (self.pageYOffset)
+	          return self.pageYOffset;
+	        if (document.documentElement && document.documentElement.scrollTop)
+	          return document.documentElement.scrollTop;
+	        if (document.body.scrollTop)
+	          return document.body.scrollTop;
+	        return 0;
+	      };
+
+	      scope.smoothScroll = function() {
+	        var startY = scope.currentYPosition();
+	        var stopY = 0;
+	        var distance = stopY > startY ? stopY - startY : startY - stopY;
+	        if (distance < 100) {
+	          scrollTo(0, stopY);
+	          return;
+	        }
+	        var speed = Math.round(scope.speed / 100);
+	        var step = Math.round(distance / 25);
+	        var leapY = stopY > startY ? startY + step : startY - step;
+	        var timer = 0;
+	        if (stopY > startY) {
+	          for (var i = startY; i < stopY; i += step) {
+	            setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+	            leapY += step;
+	            if (leapY > stopY) leapY = stopY;
+	            timer++;
+	          }
+	          return;
+	        }
+	        for (var j = startY; j > stopY; j -= step) {
+	          setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+	          leapY -= step;
+	          if (leapY < stopY) leapY = stopY;
+	          timer++;
+	        }
+	      };
+
+	      scope.button = element.find('button');
+
+	      scope.button.on('click', function() {
+	        scope.smoothScroll();
+	        element.removeClass('show');
+	      });
+
+	      window.addEventListener('scroll', function() {
+	        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+	          element.addClass('show');
+	        } else {
+	          element.removeClass('show');
+	        }
+	      });
+	    }
+	  };
+
+	}]);
+
 
 /***/ }
 /******/ ]);
